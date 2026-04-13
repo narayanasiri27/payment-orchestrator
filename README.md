@@ -98,13 +98,6 @@ Body:
 - Controller validation: missing fields → **400 BAD REQUEST**
 - Persistence: create then fetch returns consistent data in H2
 
-## “Vibe coding” prompts used (development log)
-
-This submission was built by iterating through prompts such as:
-- “Scaffold a Spring Boot Java 8 project with layered packages (controller, dto, entity, enums, exception, provider, repository, retry, routing, service, config).”
-- “Implement create/fetch payment APIs with routing (CARD→A, UPI→B), retry/failover, and status tracking.”
-- “Add JUnit5/Mockito unit tests and a README including full test matrix (positive + negative), classification (sanity/regression/integration), and run instructions.”
-
 ## Performance considerations / metrics
 
 - **DB writes**: single `payments` row per payment.
@@ -112,9 +105,4 @@ This submission was built by iterating through prompts such as:
   - request latency (via web metrics)
   - JVM metrics (heap, GC)
   - custom metrics can be added if needed (next improvement)
-
-## Next improvements (bonus)
-- Add `PaymentAttempt` table for detailed retry history and auditability
-- Add provider timeouts + circuit breaker (Resilience4j)
-- Add integration tests with Testcontainers (Redis/Postgres)
 

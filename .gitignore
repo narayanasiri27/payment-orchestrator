@@ -1,0 +1,13 @@
+/target/
+/.idea/
+/.vscode/
+*.iml
+*.log
+.classpath
+.project
+.settings/
+/.factorypath
+
+# H2 (if switched to file mode)
+*.mv.db
+*.trace.db
